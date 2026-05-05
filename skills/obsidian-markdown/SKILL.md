@@ -11,6 +11,8 @@ description: 创建和编辑 Obsidian 风格 Markdown，支持双链、嵌入、
 
 1. **添加 frontmatter**：在文件顶部写入属性（标题、标签、别名）。所有属性类型参见 [PROPERTIES.md](references/PROPERTIES.md)。
 2. **撰写内容**：使用标准 Markdown 构建结构，配合下文介绍的 Obsidian 特有语法。
+   - **标题不加编号**：仅使用纯 Markdown 标题语法（如 `# 标题`、`## 子标题`），**严禁**在标题前添加数字编号（如 `1. 标题`、`2.1 子标题`）。编号会增加维护成本，Obsidian 大纲视图已提供自动层级导航。
+   - **不以笔记名/主题作为一级标题**：笔记内容中**禁止**将笔记名称或主题作为唯一的一级标题（如 `# Project Alpha`）。笔记标题已置于 frontmatter 的 `title` 属性中，正文应直接进入内容。一级标题（`#`）仅用于正文内的各个分点/章节。
 3. **关联笔记**：使用双链（`[[笔记]]`）连接库内的其他笔记；外部链接使用标准 Markdown 链接格式。
 4. **嵌入内容**：使用 `![[嵌入]]` 语法内联嵌入其他笔记、图片或 PDF。所有嵌入类型参见 [EMBEDS.md](references/EMBEDS.md)。
 5. **添加标注**：使用 `> [!类型]` 语法高亮重要信息。所有标注类型参见 [CALLOUTS.md](references/CALLOUTS.md)。

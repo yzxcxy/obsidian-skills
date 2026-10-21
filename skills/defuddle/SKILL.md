@@ -39,3 +39,9 @@ defuddle parse <url> -p domain
 | `--json` | JSON，同时包含 HTML 和 Markdown |
 | （无参数） | HTML |
 | `-p <name>` | 指定的元数据属性 |
+
+## 提示
+
+- 链接以 `.md` 结尾时不要使用（已是 Markdown，直接读取或 WebFetch 即可）。
+- 提取失败或页面需要登录时，回退到 WebFetch 并告知用户。
+- 抓取长文档时先只取 Markdown，确认需要图片或结构化字段再加 `--json`，避免多余 Token 消耗。

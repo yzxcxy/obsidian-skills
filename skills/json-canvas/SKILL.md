@@ -242,11 +242,3 @@ Canvas 文件（`.canvas`）包含两个顶层数组，遵循 [JSON Canvas Spec 
 
 - [JSON Canvas Spec 1.0](https://jsoncanvas.org/spec/1.0/)
 - [JSON Canvas GitHub](https://github.com/obsidianmd/jsoncanvas)
-
-## 提示
-
-- 坐标与尺寸使用整数像素，节点间距建议不小于 50，避免视觉重叠。
-- 边引用 `fromNode` / `toNode` 必须指向已存在的节点 ID，重命名节点时同步更新。
-- 分组节点用 `type: "group"` 并设置较大宽高，子节点坐标需落在分组范围内。
-- 文本内容含换行时使用 `
-` 转义，保存前用 `jq . file.canvas` 校验 JSON 合法性。
